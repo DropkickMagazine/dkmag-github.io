@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis cuentos</title>
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: Georgia, serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffffff;
+      color: #121212;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Mis cuentos</h1>
+    <button onclick="cuentoRandom()">Click aqui para la experiencia total de la libre eleccion</button>
+  </div>
+
+  <script>
+    const cuentos = [
+      "cuentos/cuento1.html",
+      "cuentos/cuento2.html",
+      "cuentos/cuento3.html"
+    ];
+
+    function cuentoRandom() {
+      const randomIndex = Math.floor(Math.random() * cuentos.length);
+      window.location.href = cuentos[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
